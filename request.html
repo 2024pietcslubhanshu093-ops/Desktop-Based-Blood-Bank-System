@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Blood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Request Blood</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="donor.html">Donor Registration</a>
+      <a href="request.html">Request Blood</a>
+      <a href="available.html">Available Blood</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Request for Blood</h2>
+      <form id="requestForm">
+        <input type="text" placeholder="Patient Name" required><br><br>
+        <input type="text" placeholder="Required Blood Group" required><br><br>
+        <input type="text" placeholder="Hospital Name" required><br><br>
+        <input type="tel" placeholder="Contact Number" required><br><br>
+        <button type="submit">Submit Request</button>
+      </form>
+      <p id="reqMsg"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Blood Bank System</p>
+  </footer>
+
+  <script>
+    document.getElementById("requestForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("reqMsg").innerHTML = "🩸 Blood Request Submitted!";
+    });
+  </script>
+</body>
+</html>

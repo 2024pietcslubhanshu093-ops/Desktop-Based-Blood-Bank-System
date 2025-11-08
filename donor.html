@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donor Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Donor Registration</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="donor.html">Donor Registration</a>
+      <a href="request.html">Request Blood</a>
+      <a href="available.html">Available Blood</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Register as Donor</h2>
+      <form id="donorForm">
+        <input type="text" placeholder="Full Name" required><br><br>
+        <input type="number" placeholder="Age" required><br><br>
+        <input type="text" placeholder="Blood Group" required><br><br>
+        <input type="text" placeholder="City" required><br><br>
+        <input type="tel" placeholder="Contact Number" required><br><br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Blood Bank System</p>
+  </footer>
+
+  <script>
+    document.getElementById("donorForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("msg").innerHTML = "✅ Donor Registered Successfully!";
+    });
+  </script>
+</body>
+</html>
